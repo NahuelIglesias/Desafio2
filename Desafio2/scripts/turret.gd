@@ -18,8 +18,8 @@ func shoot():
 	var bullet:bullet = bullet_scene.instance()
 	bullet_container = add_child(bullet)
 	bullet.set_starting_values(shoot_position.global_position, (tank_player.global_position - shoot_position.global_position).normalized())
-	bullet.connect("delete_requested", self, "on_bullet_delete_requested")
+	bullet.connect("delete_requested", self, "_on_bullet_delete_requested")
 
-func on_bullet_delete_requested(bullet):
+func _on_bullet_delete_requested(bullet):
 	bullet_container.remove_child(bullet)
 	bullet.queue_free()
