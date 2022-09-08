@@ -14,3 +14,7 @@ func set_starting_values(starting_position:Vector2, direction:Vector2):
 
 func _physics_process(delta):
 	position += direction*speed*delta
+
+
+func _on_Timer_timeout():
+	pass # Replace with function body.
