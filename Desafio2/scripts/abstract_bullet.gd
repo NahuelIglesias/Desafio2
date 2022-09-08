@@ -1,6 +1,8 @@
 extends Sprite
 class_name bullet
 
+signal delete_requested(bullet)
+
 export (float) var speed
 var direction:Vector2
 
@@ -10,6 +12,7 @@ func _ready():
 func set_starting_values(starting_position:Vector2, direction:Vector2):
 	global_position = starting_position
 	self.direction = direction
+	$Timer.start()
 	set_physics_process(true)
 
 func _physics_process(delta):
@@ -17,4 +20,4 @@ func _physics_process(delta):
 
 
 func _on_Timer_timeout():
-	pass # Replace with function body.
+	emit_signal("delete_requested", self)

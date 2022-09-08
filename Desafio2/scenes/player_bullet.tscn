@@ -7,3 +7,6 @@
 scale = Vector2( 0.015, 0.015 )
 texture = ExtResource( 2 )
 speed = 600.0
+
+[node name="Timer" parent="." index="0"]
+wait_time = 3.0
