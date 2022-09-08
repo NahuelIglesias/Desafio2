@@ -1,14 +1,18 @@
 extends Sprite
 
+onready var tankCannon = $tank_cannon
 
-# Called when the node enters the scene tree for the first time.
+var bullet_container:Node
+
 func _ready():
 	position = Vector2(375,305)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if (Input.is_action_pressed("mover_izq")):
 		position.x += -10
 	if (Input.is_action_pressed("mover_der")):
 		position.x += 10
+
+func set_bullet_container(container):
+	tankCannon.bullet_container = container
+	bullet_container = container

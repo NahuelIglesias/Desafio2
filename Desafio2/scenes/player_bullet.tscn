@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/abstract_bullet.tscn" type="PackedScene" id=1]
+[ext_resource path="res://resources/player_bullet.png" type="Texture" id=2]
+
+[node name="bullet" instance=ExtResource( 1 )]
+scale = Vector2( 0.015, 0.015 )
+texture = ExtResource( 2 )
+speed = 600.0
