@@ -28,3 +28,5 @@ expand = true
 [node name="tank_player" parent="." instance=ExtResource( 1 )]
 
 [node name="turret" parent="." instance=ExtResource( 5 )]
+position = Vector2( 568, 80 )
+scale = Vector2( 0.24, 0.36875 )

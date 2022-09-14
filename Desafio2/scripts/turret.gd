@@ -16,7 +16,7 @@ func _on_Timer_timeout():
 
 func shoot():
 	var bullet:bullet = bullet_scene.instance()
-	bullet_container = add_child(bullet)
+	bullet_container.add_child(bullet)
 	bullet.set_starting_values(shoot_position.global_position, (tank_player.global_position - shoot_position.global_position).normalized())
 	bullet.connect("delete_requested", self, "_on_bullet_delete_requested")
 
